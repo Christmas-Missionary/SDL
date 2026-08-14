@@ -52,7 +52,7 @@ typedef struct SDL_AudioDevice SDL_AudioDevice;
 typedef struct SDL_LogicalAudioDevice SDL_LogicalAudioDevice;
 
 // Used by src/SDL.c to initialize a particular audio driver.
-extern bool SDL_InitAudio(const char *driver_name);
+extern bool SDL_AudioInit(const char *driver_name);
 
 // Used by src/SDL.c to shut down previously-initialized audio.
 extern void SDL_QuitAudio(void);

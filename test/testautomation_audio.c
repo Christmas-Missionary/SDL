@@ -89,7 +89,7 @@ static int SDLCALL audio_quitInitAudioSubSystem(void *arg)
 /**
  * Start and stop audio directly
  *
- * \sa SDL_InitAudio
+ * \sa SDL_AudioInit
  * \sa SDL_QuitAudio
  */
 static int SDLCALL audio_initQuitAudio(void *arg)
@@ -150,7 +150,7 @@ static int SDLCALL audio_initQuitAudio(void *arg)
 /**
  * Start, open, close and stop audio
  *
- * \sa SDL_InitAudio
+ * \sa SDL_AudioInit
  * \sa SDL_OpenAudioDevice
  * \sa SDL_CloseAudioDevice
  * \sa SDL_QuitAudio

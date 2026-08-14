@@ -447,7 +447,7 @@ bool SDL_InitSubSystem(SDL_InitFlags flags)
             }
 
             SDL_IncrementSubsystemRefCount(SDL_INIT_AUDIO);
-            if (!SDL_InitAudio(NULL)) {
+            if (!SDL_AudioInit(NULL)) {
                 SDL_DecrementSubsystemRefCount(SDL_INIT_AUDIO);
                 SDL_PushError();
                 SDL_QuitSubSystem(SDL_INIT_EVENTS);

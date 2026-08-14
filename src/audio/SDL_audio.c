@@ -949,8 +949,7 @@ static Uint32 SDLCALL HashAudioDeviceID(void *userdata, const void *key)
     return ((Uint32) ((uintptr_t) key)) >> 2;
 }
 
-// !!! FIXME: the video subsystem does SDL_VideoInit, not SDL_InitVideo. Make this match.
-bool SDL_InitAudio(const char *driver_name)
+bool SDL_AudioInit(const char *driver_name)
 {
     if (SDL_GetCurrentAudioDriver()) {
         SDL_QuitAudio(); // shutdown driver if already running.
