@@ -656,7 +656,7 @@ void SDL_QuitSubSystem(SDL_InitFlags flags)
 #ifndef SDL_AUDIO_DISABLED
     if (flags & SDL_INIT_AUDIO) {
         if (SDL_ShouldQuitSubsystem(SDL_INIT_AUDIO)) {
-            SDL_QuitAudio();
+            SDL_AudioQuit();
             // audio implies events
             SDL_QuitSubSystem(SDL_INIT_EVENTS);
         }

@@ -55,7 +55,7 @@ typedef struct SDL_LogicalAudioDevice SDL_LogicalAudioDevice;
 extern bool SDL_AudioInit(const char *driver_name);
 
 // Used by src/SDL.c to shut down previously-initialized audio.
-extern void SDL_QuitAudio(void);
+extern void SDL_AudioQuit(void);
 
 // Function to get a list of audio formats, ordered most similar to `format` to least, 0-terminated. Don't free results.
 const SDL_AudioFormat *SDL_ClosestAudioFormats(SDL_AudioFormat format);

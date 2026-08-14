@@ -952,7 +952,7 @@ static Uint32 SDLCALL HashAudioDeviceID(void *userdata, const void *key)
 bool SDL_AudioInit(const char *driver_name)
 {
     if (SDL_GetCurrentAudioDriver()) {
-        SDL_QuitAudio(); // shutdown driver if already running.
+        SDL_AudioQuit(); // shutdown driver if already running.
     }
 
     // make sure device IDs start at 2 (because of SDL2 legacy interface), but don't reset the counter on each init, in case the app is holding an old device ID somewhere.
@@ -1110,7 +1110,7 @@ static bool SDLCALL DestroyOnePhysicalAudioDevice(void *userdata, const SDL_Hash
     return true;  // keep iterating.
 }
 
-void SDL_QuitAudio(void)
+void SDL_AudioQuit(void)
 {
     if (!current_audio.name) {  // not initialized?!
         return;
